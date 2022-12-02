@@ -1,0 +1,74 @@
+@use "../utilities" as *;
+
+.control-container {
+  @include flex(space-around);
+  gap: 0.5rem;
+
+  .repeat-icon {
+    display: none;
+    cursor: pointer;
+    @include trans;
+
+    &:hover {
+      color: var(--pink);
+    }
+  }
+
+  .repeat-active {
+    color: var(--background-color);
+  }
+
+  .repeat-noActive {
+    color: var(--text-color);
+  }
+
+  .backward-icon,
+  .forward-icon,
+  .play-icon,
+  .pause-icon,
+  .shuffle-icon {
+    cursor: pointer;
+    color: var(--text-color);
+    @include trans;
+
+    &:hover {
+      color: var(--pink);
+    }
+  }
+
+  .shuffle-icon {
+    display: none;
+  }
+
+  .shuffle-active {
+    color: var(--background-color);
+  }
+
+  .shuffle-noActive {
+    color: var(--text-color);
+  }
+}
+
+@media (min-width: 640px) {
+  .control-container {
+    .repeat-icon {
+      display: block;
+    }
+
+    .shuffle-icon {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .control-container {
+    width: 13rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .control-container {
+    width: 20rem;
+  }
+}

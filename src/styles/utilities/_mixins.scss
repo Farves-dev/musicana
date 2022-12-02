@@ -1,0 +1,15 @@
+@mixin flex($type) {
+  display: flex;
+  align-items: center;
+  justify-content: $type;
+}
+
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin trans {
+  transition: 0.4s all;
+}

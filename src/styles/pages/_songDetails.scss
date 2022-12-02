@@ -1,0 +1,36 @@
+@use "../utilities" as *;
+
+.songDetails-container {
+  display: flex;
+  flex-direction: column;
+
+  .lyrics-container {
+    margin-bottom: 2.5rem;
+    margin-top: 3rem;
+
+    .lyrics-title {
+      font-weight: 700;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      color: var(--pink);
+    }
+
+    .lyrics-text {
+      margin-top: 1.25rem;
+
+      .lyrics {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-block: 0.25rem;
+      }
+
+      .noLyrics {
+        color: var(--text-color);
+        font-size: 1rem;
+        line-height: 1.5rem;
+        margin-block: 0.25rem;
+      }
+    }
+  }
+}

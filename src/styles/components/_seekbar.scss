@@ -1,0 +1,169 @@
+@use "../utilities" as *;
+
+.seekBar-container {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+
+  .minus-btn {
+    display: none;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    font-size: 1.7rem;
+    @include trans;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--pink);
+      scale: 1.5;
+    }
+  }
+
+  .plus-btn {
+    display: none;
+    color: var(--text-color);
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    @include trans;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--pink);
+      scale: 1.1;
+    }
+  }
+
+  .starting-number,
+  .ending-number {
+    color: var(--text-color);
+  }
+
+  input[type="range"] {
+    height: 0.25rem;
+    -webkit-appearance: none;
+    margin-inline: 1rem;
+    width: 10rem;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      width: 10rem;
+      height: 0.25rem;
+      cursor: pointer;
+      background: var(--text-color);
+      border-radius: 0.5rem;
+    }
+
+    &::-webkit-slider-thumb {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background: var(--pink);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -0.4rem;
+      @include trans;
+
+      &:hover {
+        background: var(--pink1);
+      }
+    }
+
+    &::-moz-range-track {
+      width: 10rem;
+      height: 0.25rem;
+      cursor: pointer;
+      background: var(--text-color);
+      border-radius: 0.5rem;
+    }
+
+    &::-moz-range-thumb {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background: var(--pink);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -0.4rem;
+    }
+
+    &::-ms-track {
+      width: 10rem;
+      height: 0.25rem;
+      cursor: pointer;
+      background: var(--text-color);
+      border-radius: 0.5rem;
+    }
+
+    &::-ms-thumb {
+      height: 1rem;
+      width: 1rem;
+      border-radius: 50%;
+      background: var(--pink);
+      cursor: pointer;
+      -webkit-appearance: none;
+      margin-top: -0.4rem;
+    }
+
+    &::-ms-fill-lower {
+      background: var(--pink);
+      border-radius: 50%;
+    }
+
+    &::-ms-fill-upper {
+      background: var(--pink);
+      border-radius: 50%;
+    }
+  }
+}
+
+@media (min-width: 640px) {
+  .seekBar-container {
+    input[type="range"] {
+      display: block;
+      width: 14rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .seekBar-container {
+    display: flex;
+
+    input[type="range"] {
+      display: block;
+      width: 14rem;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .seekBar-container {
+    .minus-btn {
+      margin-right: 1rem;
+      display: block;
+    }
+
+    .plus-btn {
+      margin-left: 1rem;
+      display: block;
+    }
+
+    input[type="range"] {
+      display: block;
+      width: 18rem;
+    }
+  }
+}
+
+@media (min-width: 1536px) {
+  .seekBar-container {
+    input[type="range"] {
+      width: 24rem;
+    }
+  }
+}

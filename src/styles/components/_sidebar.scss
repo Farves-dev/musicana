@@ -1,0 +1,158 @@
+@use "../utilities" as *;
+
+.navlinks-container {
+  margin-top: 1.5rem;
+
+  .navlinks {
+    @include flex(flex-start);
+    flex-direction: row;
+    margin-inline: 2rem;
+    font-size: 1.2rem;
+    line-height: 3.5rem;
+    font-weight: 500;
+    text-decoration: none;
+    @include trans;
+    color: var(--text-color);
+    z-index: 9999;
+
+    &:hover {
+      color: var(--pink);
+    }
+
+    .navlinks-icons {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.sidebar-container {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 240px;
+  padding-top: 1.5rem;
+  padding-inline: 1rem;
+  background: var(--background-color);
+  border-top-right-radius: 3rem;
+  margin-right: 1rem;
+
+  .logo {
+    width: 13rem;
+    height: 3.5rem;
+    object-fit: contain;
+    background-image: var(--logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.sidebar-icons {
+  position: absolute;
+  display: block;
+  top: 1.5rem;
+  right: 0.4rem;
+
+  .menu-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+    color: var(--pink);
+    @include trans;
+    cursor: pointer;
+  }
+
+  &:hover {
+    scale: 1.2;
+  }
+}
+
+.mobSidebar-container {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 66%;
+  background-color: var(--background-color);
+  z-index: 11111;
+  padding: 1.5rem;
+  flex-direction: column;
+  @include flex(flex-start);
+  @include trans;
+
+  .mob-wave {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: var(--phone-wave);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    width: 15rem;
+    height: 4.5rem;
+    border: none;
+    z-index: 9999;
+    background-image: var(--logo);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .navlinks-container {
+    margin-top: 1.5rem;
+    z-index: 9999;
+
+    .navlinks {
+      @include flex(flex-start);
+      flex-direction: row;
+      margin-inline: 2rem;
+      font-size: 1.2rem;
+      line-height: 3.5rem;
+      font-weight: 500;
+      text-decoration: none;
+      @include trans;
+      color: var(--text-color);
+      z-index: 9999;
+
+      &:hover {
+        color: var(--pink);
+      }
+
+      .navlinks-icons {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+.openMob {
+  left: 0;
+}
+
+.closeMob {
+  left: -100%;
+}
+
+@media (min-width: 768px) {
+  .sidebar-container {
+    display: flex;
+  }
+
+  .sidebar-icons {
+    display: none;
+  }
+
+  .mob-sidebar {
+    display: none;
+  }
+
+  .mobSidebar-container {
+    display: none;
+  }
+}

@@ -1,0 +1,26 @@
+@use "../utilities" as *;
+
+.topArtists-container {
+  display: flex;
+  flex-direction: column;
+
+  .topArtists-title {
+    font-weight: 700;
+    color: var(--pink);
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    .topArtists-span {
+      font-weight: 900;
+    }
+  }
+
+  .topArtists-artistCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+}

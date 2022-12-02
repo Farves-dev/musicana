@@ -1,0 +1,59 @@
+@use "../utilities" as *;
+
+.discover-container {
+  display: flex;
+  flex-direction: column;
+
+  .genre-container {
+    width: 100%;
+    @include flex(space-between);
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+
+    .genre-title {
+      font-weight: 700;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      color: var(--pink);
+      text-align: left;
+    }
+
+    .genre-select {
+      color: var(--text-color);
+      padding: 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      border-radius: 0.5rem;
+      margin-top: 1.35rem;
+      background: linear-gradient(to right, var(--pink), transparent);
+      outline: none;
+      border: none;
+      cursor: pointer;
+
+      .genre-option {
+        background-color: var(--pink);
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .songs-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .discover-container {
+    .genre-container {
+      flex-direction: row;
+
+      .genre-select {
+        margin-top: 0;
+      }
+    }
+  }
+}

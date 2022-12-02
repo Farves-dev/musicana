@@ -1,0 +1,29 @@
+@use "../utilities" as *;
+
+.artistCard-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  padding: 1rem;
+  background: linear-gradient(to right, var(--d-pink), var(--l-pink));
+  backdrop-filter: blur(4px);
+  animation: slideup 1s ease-in-out;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+
+  .artistCard-img {
+    position: relative;
+    width: 100%;
+    height: 14rem;
+  }
+
+  .artistCard-subtitle {
+    margin-top: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    @include truncate;
+  }
+}

@@ -1,0 +1,60 @@
+@use "../utilities" as *;
+@use "../base" as *;
+
+.track-container {
+  flex: 1 1 0%;
+  @include flex(flex-start);
+
+  .track-spinner {
+    display: none;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 1rem;
+
+    .track-img {
+      border-radius: 50%;
+      width: 4rem;
+      border: 2px solid var(--text-color);
+      height: 4rem;
+    }
+  }
+
+  .track-spin {
+    animation: spin 3s linear infinite;
+  }
+
+  .track-noSpin {
+    animation: none;
+  }
+
+  .track-text {
+    width: 50%;
+
+    .track-title {
+      @include truncate;
+      color: var(--text-color);
+      font-weight: 700;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+
+    .track-subtitle {
+      @include truncate;
+      color: var(--text-color);
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 640px) {
+  .track-container {
+    .track-spinner {
+      display: block;
+    }
+  }
+}

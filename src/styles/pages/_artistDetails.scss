@@ -1,0 +1,7 @@
+@use "../utilities" as *;
+
+.artistDetails-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}

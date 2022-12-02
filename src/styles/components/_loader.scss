@@ -1,0 +1,31 @@
+@use "../utilities" as *;
+
+.loader-container {
+  width: 100%;
+  @include flex(center);
+  flex-direction: column;
+
+  .loader-img {
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    background-image: var(--loader);
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: spinner 1s linear infinite;
+  }
+
+  .loader-text {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: var(--pink);
+  }
+}
+
+@keyframes spinner {
+  100% {
+    rotate: 360deg;
+  }
+}
