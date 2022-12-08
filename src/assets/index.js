@@ -1,5 +1,3 @@
-import loader from "./loader.svg";
-import logo from "./logo.svg";
 import chain from "./chain.png";
 import darkLogo from "./dark-logo.png";
 import lightLogo from "./light-logo.png";
@@ -21,8 +19,6 @@ import darkLeftPhoneWave from "./waves/d-l-phone-wave.png";
 import lightLeftPhoneWave from "./waves/l-l-phone-wave.png";
 
 export {
-  logo,
-  loader,
   chain,
   darkLogo,
   lightLogo,

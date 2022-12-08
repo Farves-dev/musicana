@@ -1,7 +1,7 @@
 import "../styles/main.scss";
 import { useParams } from "react-router-dom";
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { DetailsHeader, Error, Loader, RelatedSongs } from "../components";
 import {
   useGetSongDetailsQuery,
@@ -10,7 +10,7 @@ import {
 import { setActiveSong, playPause } from "../redux/features/playerSlice";
 
 const SongDetails = () => {
-  const { songid, id, artistId } = useParams();
+  const { songid, artistId } = useParams();
   const { activeSong, isPlaying } = useSelector((state) => state.player);
 
   const { data: songData, isFetching: isFetchingSongDetails } =
@@ -23,7 +23,6 @@ const SongDetails = () => {
 
   if (isFetchingSongDetails && isFetchinRelatedSongs)
     return <Loader title="Searching song details" />;
-
 
   if (error) return <Error />;
 

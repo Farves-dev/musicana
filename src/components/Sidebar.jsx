@@ -1,8 +1,5 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { lightLogo } from "../assets/index";
-import { darkLogo } from "../assets/index";
-import { lightLeftPhoneWave } from "../assets/index";
 import { links } from "../assets/constants";
 import { IoClose } from "react-icons/io5";
 import { CgMenuLeft } from "react-icons/cg";
@@ -54,7 +51,7 @@ const Sidebar = () => {
           mobileMenuOpen ? "openMob" : "closeMob"
         }`}
       >
-        <div className="mob-wave"/>
+        <div className="mob-wave" />
         <DarkMode />
         <div className="logo" />
         <NavLinks

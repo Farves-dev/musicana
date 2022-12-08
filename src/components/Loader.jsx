@@ -1,5 +1,4 @@
 import "../styles/main.scss";
-import { loaderLight } from "../assets";
 
 const Loader = ({ title }) => (
   <div className="loader-container">

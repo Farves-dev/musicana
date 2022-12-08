@@ -150,7 +150,6 @@
       font-weight: 700;
       font-size: 1.5rem;
       line-height: 2rem;
-      // position: relative;
     }
 
     .link {
@@ -173,7 +172,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 2rem;
-    // z-index: 999;
 
     .topArtistText-wrapper {
       @include flex(space-between);
@@ -184,7 +182,6 @@
         font-weight: 700;
         font-size: 1.5rem;
         line-height: 2rem;
-        // position: relative;
       }
 
       .link {
