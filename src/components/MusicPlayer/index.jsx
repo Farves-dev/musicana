@@ -60,7 +60,7 @@ const MusicPlayer = () => {
 
   return (
     <div className="music-player_container">
-      <div className="wave-img">
+      <div className="wave-img" />
         <div className="player-container">
           <Track
             isPlaying={isPlaying}
@@ -109,7 +109,6 @@ const MusicPlayer = () => {
           />
         </div>
       </div>
-    </div>
   );
 };
 
