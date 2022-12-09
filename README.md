@@ -4,14 +4,14 @@ Musicana is a music player web app. You can listen any song you want. Also you c
 
 ## Technologies Used
 
-- react js
-- vite
-- rapid api
-- redux
-- sass
-- swiper
-- axios
-- react-router
+- React JS
+- Vite
+- Rapid API
+- Redux
+- SASS
+- Swiper
+- Axios
+- React-router
 
 ![Home](./src/assets/screenshots/Screenshot%202022-12-09%20073910.png)
 ![Lyrics](./src/assets/screenshots/Screenshot%202022-12-09%20073930.png)
