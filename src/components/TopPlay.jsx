@@ -33,7 +33,7 @@ const TopChartCard = ({
           <Link to={`/songs/${song.key}`} className="link">
             <p className="topChartCard-title">{song?.title}</p>
           </Link>
-          <Link to={`/artists/${song?.artists[0].adamid}`} className="link">
+          <Link to={`/artists/${song?.artists?.adamid}`} className="link">
             <p className="topChartCard-subTitle">{song?.subtitle}</p>
           </Link>
         </div>
@@ -70,6 +70,7 @@ const TopPlay = () => {
     dispatch(setActiveSong({ song, data, i }));
     dispatch(playPause(true));
   };
+
 
   return (
     <div ref={divRef} className="topPlay-container">
@@ -119,7 +120,7 @@ const TopPlay = () => {
               style={{ width: "25%", height: "auto" }}
               className="swiperSlide"
             >
-              <Link to={`/artists/${artist?.artists[0].adamid}`}>
+              <Link to={`/artists/${artist?.artists?.adamid}`}>
                 <img
                   src={artist?.images?.background}
                   alt="Name"

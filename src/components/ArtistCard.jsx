@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const ArtistCard = ({ track }) => {
   const navigate = useNavigate();
-
+  
   return (
     <div
       className="artistCard-container"
